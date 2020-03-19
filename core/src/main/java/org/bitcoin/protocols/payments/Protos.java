@@ -63,6 +63,7 @@ public final class Protos {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:payments.Output)
       OutputOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use Output.newBuilder() to construct.
     private Output(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -82,6 +83,9 @@ public final class Protos {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -94,8 +98,8 @@ public final class Protos {
               done = true;
               break;
             default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -224,7 +228,6 @@ public final class Protos {
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -256,7 +259,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasAmount()) {
         hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -271,6 +274,17 @@ public final class Protos {
       return hash;
     }
 
+    public static org.bitcoin.protocols.payments.Protos.Output parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoin.protocols.payments.Protos.Output parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoin.protocols.payments.Protos.Output parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -434,7 +448,7 @@ public final class Protos {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -447,12 +461,12 @@ public final class Protos {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -631,7 +645,7 @@ public final class Protos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Output(input, extensionRegistry);
+        return new Output(input, extensionRegistry);
       }
     };
 
@@ -834,6 +848,7 @@ public final class Protos {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:payments.PaymentDetails)
       PaymentDetailsOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use PaymentDetails.newBuilder() to construct.
     private PaymentDetails(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -858,6 +873,9 @@ public final class Protos {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -870,8 +888,8 @@ public final class Protos {
               done = true;
               break;
             default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -1313,7 +1331,6 @@ public final class Protos {
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1367,7 +1384,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasNetwork()) {
         hash = (37 * hash) + NETWORK_FIELD_NUMBER;
         hash = (53 * hash) + getNetwork().hashCode();
@@ -1403,6 +1420,17 @@ public final class Protos {
       return hash;
     }
 
+    public static org.bitcoin.protocols.payments.Protos.PaymentDetails parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoin.protocols.payments.Protos.PaymentDetails parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoin.protocols.payments.Protos.PaymentDetails parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1602,7 +1630,7 @@ public final class Protos {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1615,12 +1643,12 @@ public final class Protos {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2508,7 +2536,7 @@ public final class Protos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new PaymentDetails(input, extensionRegistry);
+        return new PaymentDetails(input, extensionRegistry);
       }
     };
 
@@ -2624,6 +2652,7 @@ public final class Protos {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:payments.PaymentRequest)
       PaymentRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use PaymentRequest.newBuilder() to construct.
     private PaymentRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -2646,6 +2675,9 @@ public final class Protos {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2658,8 +2690,8 @@ public final class Protos {
               done = true;
               break;
             default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -2916,7 +2948,6 @@ public final class Protos {
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -2963,7 +2994,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasPaymentDetailsVersion()) {
         hash = (37 * hash) + PAYMENT_DETAILS_VERSION_FIELD_NUMBER;
         hash = (53 * hash) + getPaymentDetailsVersion();
@@ -2989,6 +3020,17 @@ public final class Protos {
       return hash;
     }
 
+    public static org.bitcoin.protocols.payments.Protos.PaymentRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoin.protocols.payments.Protos.PaymentRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoin.protocols.payments.Protos.PaymentRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3166,7 +3208,7 @@ public final class Protos {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -3179,12 +3221,12 @@ public final class Protos {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3560,7 +3602,7 @@ public final class Protos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new PaymentRequest(input, extensionRegistry);
+        return new PaymentRequest(input, extensionRegistry);
       }
     };
 
@@ -3615,6 +3657,7 @@ public final class Protos {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:payments.X509Certificates)
       X509CertificatesOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use X509Certificates.newBuilder() to construct.
     private X509Certificates(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -3633,6 +3676,9 @@ public final class Protos {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -3645,8 +3691,8 @@ public final class Protos {
               done = true;
               break;
             default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -3757,7 +3803,6 @@ public final class Protos {
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -3781,7 +3826,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (getCertificateCount() > 0) {
         hash = (37 * hash) + CERTIFICATE_FIELD_NUMBER;
         hash = (53 * hash) + getCertificateList().hashCode();
@@ -3791,6 +3836,17 @@ public final class Protos {
       return hash;
     }
 
+    public static org.bitcoin.protocols.payments.Protos.X509Certificates parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoin.protocols.payments.Protos.X509Certificates parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoin.protocols.payments.Protos.X509Certificates parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3943,7 +3999,7 @@ public final class Protos {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -3956,12 +4012,12 @@ public final class Protos {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4142,7 +4198,7 @@ public final class Protos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new X509Certificates(input, extensionRegistry);
+        return new X509Certificates(input, extensionRegistry);
       }
     };
 
@@ -4284,6 +4340,7 @@ public final class Protos {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:payments.Payment)
       PaymentOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use Payment.newBuilder() to construct.
     private Payment(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -4305,6 +4362,9 @@ public final class Protos {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -4317,8 +4377,8 @@ public final class Protos {
               done = true;
               break;
             default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -4611,7 +4671,6 @@ public final class Protos {
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -4647,7 +4706,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasMerchantData()) {
         hash = (37 * hash) + MERCHANT_DATA_FIELD_NUMBER;
         hash = (53 * hash) + getMerchantData().hashCode();
@@ -4669,6 +4728,17 @@ public final class Protos {
       return hash;
     }
 
+    public static org.bitcoin.protocols.payments.Protos.Payment parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoin.protocols.payments.Protos.Payment parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoin.protocols.payments.Protos.Payment parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4851,7 +4921,7 @@ public final class Protos {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -4864,12 +4934,12 @@ public final class Protos {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5552,7 +5622,7 @@ public final class Protos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Payment(input, extensionRegistry);
+        return new Payment(input, extensionRegistry);
       }
     };
 
@@ -5633,6 +5703,7 @@ public final class Protos {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:payments.PaymentACK)
       PaymentACKOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use PaymentACK.newBuilder() to construct.
     private PaymentACK(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -5651,6 +5722,9 @@ public final class Protos {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -5663,8 +5737,8 @@ public final class Protos {
               done = true;
               break;
             default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -5846,7 +5920,6 @@ public final class Protos {
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -5878,7 +5951,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasPayment()) {
         hash = (37 * hash) + PAYMENT_FIELD_NUMBER;
         hash = (53 * hash) + getPayment().hashCode();
@@ -5892,6 +5965,17 @@ public final class Protos {
       return hash;
     }
 
+    public static org.bitcoin.protocols.payments.Protos.PaymentACK parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoin.protocols.payments.Protos.PaymentACK parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoin.protocols.payments.Protos.PaymentACK parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -6060,7 +6144,7 @@ public final class Protos {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -6073,12 +6157,12 @@ public final class Protos {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6417,7 +6501,7 @@ public final class Protos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new PaymentACK(input, extensionRegistry);
+        return new PaymentACK(input, extensionRegistry);
       }
     };
 
@@ -6484,7 +6568,7 @@ public final class Protos {
       "\001(\014\"\225\001\n\016PaymentRequest\022\"\n\027payment_detail" +
       "s_version\030\001 \001(\r:\0011\022\026\n\010pki_type\030\002 \001(\t:\004no" +
       "ne\022\020\n\010pki_data\030\003 \001(\014\022\"\n\032serialized_payme" +
-      "nt_details\030\004 \002(\014\022\021\n\tsignature\030\005 \001(\014\"\'\n\020X",
+      "nt_details\030\004 \002(\014\022\021\n\tsignature\030\005 \001(\014\"\'\n\020X" +
       "509Certificates\022\023\n\013certificate\030\001 \003(\014\"i\n\007" +
       "Payment\022\025\n\rmerchant_data\030\001 \001(\014\022\024\n\014transa" +
       "ctions\030\002 \003(\014\022#\n\trefund_to\030\003 \003(\0132\020.paymen" +

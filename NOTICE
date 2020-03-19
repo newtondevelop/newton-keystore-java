@@ -1,0 +1,2 @@
+1. Change the secp256k1 to secp256r1
+2. Change the 'Bitcoin seed' to 'Nist256p1 seed'

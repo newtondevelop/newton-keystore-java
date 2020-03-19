@@ -10,6 +10,7 @@ dependencies {
     implementation 'com.lambdaworks:scrypt:1.4.0'
     implementation 'com.google.guava:guava:24.0-android'
     compile 'com.google.protobuf:protobuf-java:3.5.1'
+    compile 'com.google.protobuf:protoc:3.5.1'
     implementation 'com.squareup.okhttp3:okhttp:3.9.1'
     implementation 'org.slf4j:slf4j-api:1.7.25'
     implementation 'net.jcip:jcip-annotations:1.0'
@@ -25,7 +26,10 @@ dependencies {
 sourceCompatibility = 1.7
 
 protobuf {
-    generatedFilesBaseDir = new File(projectDir, '/src') // workaround for '$projectDir/src'
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.5.1'
+        generatedFilesBaseDir = "$projectDir/src/"
+    }
 }
 
 test {

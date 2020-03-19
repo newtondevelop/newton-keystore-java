@@ -68,7 +68,7 @@ public class NativeSecp256k1 {
 
         r.lock();
         try {
-            return secp256k1_ecdsa_verify(byteBuff, Secp256k1Context.getContext(), signature.length, pub.length) == 1;
+            return secp256k1_ecdsa_verify(byteBuff, Secp256r1Context.getContext(), signature.length, pub.length) == 1;
         } finally {
             r.unlock();
         }
@@ -98,7 +98,7 @@ public class NativeSecp256k1 {
 
         r.lock();
         try {
-            retByteArray = secp256k1_ecdsa_sign(byteBuff, Secp256k1Context.getContext());
+            retByteArray = secp256k1_ecdsa_sign(byteBuff, Secp256r1Context.getContext());
         } finally {
             r.unlock();
         }
@@ -131,7 +131,7 @@ public class NativeSecp256k1 {
 
         r.lock();
         try {
-            return secp256k1_ec_seckey_verify(byteBuff, Secp256k1Context.getContext()) == 1;
+            return secp256k1_ec_seckey_verify(byteBuff, Secp256r1Context.getContext()) == 1;
         } finally {
             r.unlock();
         }
@@ -160,7 +160,7 @@ public class NativeSecp256k1 {
 
         r.lock();
         try {
-            retByteArray = secp256k1_ec_pubkey_create(byteBuff, Secp256k1Context.getContext());
+            retByteArray = secp256k1_ec_pubkey_create(byteBuff, Secp256r1Context.getContext());
         } finally {
             r.unlock();
         }
@@ -181,7 +181,7 @@ public class NativeSecp256k1 {
     public static synchronized void cleanup() {
         w.lock();
         try {
-            secp256k1_destroy_context(Secp256k1Context.getContext());
+            secp256k1_destroy_context(Secp256r1Context.getContext());
         } finally {
             w.unlock();
         }
@@ -190,7 +190,7 @@ public class NativeSecp256k1 {
     public static long cloneContext() {
         r.lock();
         try {
-            return secp256k1_ctx_clone(Secp256k1Context.getContext());
+            return secp256k1_ctx_clone(Secp256r1Context.getContext());
         } finally {
             r.unlock();
         }
@@ -218,7 +218,7 @@ public class NativeSecp256k1 {
         byte[][] retByteArray;
         r.lock();
         try {
-            retByteArray = secp256k1_privkey_tweak_mul(byteBuff, Secp256k1Context.getContext());
+            retByteArray = secp256k1_privkey_tweak_mul(byteBuff, Secp256r1Context.getContext());
         } finally {
             r.unlock();
         }
@@ -257,7 +257,7 @@ public class NativeSecp256k1 {
         byte[][] retByteArray;
         r.lock();
         try {
-            retByteArray = secp256k1_privkey_tweak_add(byteBuff, Secp256k1Context.getContext());
+            retByteArray = secp256k1_privkey_tweak_add(byteBuff, Secp256r1Context.getContext());
         } finally {
             r.unlock();
         }
@@ -296,7 +296,7 @@ public class NativeSecp256k1 {
         byte[][] retByteArray;
         r.lock();
         try {
-            retByteArray = secp256k1_pubkey_tweak_add(byteBuff, Secp256k1Context.getContext(), pubkey.length);
+            retByteArray = secp256k1_pubkey_tweak_add(byteBuff, Secp256r1Context.getContext(), pubkey.length);
         } finally {
             r.unlock();
         }
@@ -335,7 +335,7 @@ public class NativeSecp256k1 {
         byte[][] retByteArray;
         r.lock();
         try {
-            retByteArray = secp256k1_pubkey_tweak_mul(byteBuff, Secp256k1Context.getContext(), pubkey.length);
+            retByteArray = secp256k1_pubkey_tweak_mul(byteBuff, Secp256r1Context.getContext(), pubkey.length);
         } finally {
             r.unlock();
         }
@@ -374,7 +374,7 @@ public class NativeSecp256k1 {
         byte[][] retByteArray;
         r.lock();
         try {
-            retByteArray = secp256k1_ecdh(byteBuff, Secp256k1Context.getContext(), pubkey.length);
+            retByteArray = secp256k1_ecdh(byteBuff, Secp256r1Context.getContext(), pubkey.length);
         } finally {
             r.unlock();
         }
@@ -407,7 +407,7 @@ public class NativeSecp256k1 {
 
         w.lock();
         try {
-            return secp256k1_context_randomize(byteBuff, Secp256k1Context.getContext()) == 1;
+            return secp256k1_context_randomize(byteBuff, Secp256r1Context.getContext()) == 1;
         } finally {
             w.unlock();
         }
@@ -430,7 +430,7 @@ public class NativeSecp256k1 {
 
         r.lock();
         try {
-            retByteArray = secp256k1_schnorr_sign(byteBuff, Secp256k1Context.getContext());
+            retByteArray = secp256k1_schnorr_sign(byteBuff, Secp256r1Context.getContext());
         } finally {
             r.unlock();
         }

@@ -57,6 +57,7 @@ public final class PeerSeedProtos {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:org.bitcoin.crawler.PeerSeedData)
       PeerSeedDataOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use PeerSeedData.newBuilder() to construct.
     private PeerSeedData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -77,6 +78,9 @@ public final class PeerSeedProtos {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -89,8 +93,8 @@ public final class PeerSeedProtos {
               done = true;
               break;
             default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -265,7 +269,6 @@ public final class PeerSeedProtos {
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -302,7 +305,7 @@ public final class PeerSeedProtos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasIpAddress()) {
         hash = (37 * hash) + IP_ADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getIpAddress().hashCode();
@@ -320,6 +323,17 @@ public final class PeerSeedProtos {
       return hash;
     }
 
+    public static org.bitcoin.crawler.PeerSeedProtos.PeerSeedData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoin.crawler.PeerSeedProtos.PeerSeedData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoin.crawler.PeerSeedProtos.PeerSeedData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -485,7 +499,7 @@ public final class PeerSeedProtos {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -498,12 +512,12 @@ public final class PeerSeedProtos {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -734,7 +748,7 @@ public final class PeerSeedProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new PeerSeedData(input, extensionRegistry);
+        return new PeerSeedData(input, extensionRegistry);
       }
     };
 
@@ -819,6 +833,7 @@ public final class PeerSeedProtos {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:org.bitcoin.crawler.PeerSeeds)
       PeerSeedsOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use PeerSeeds.newBuilder() to construct.
     private PeerSeeds(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -839,6 +854,9 @@ public final class PeerSeedProtos {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -851,8 +869,8 @@ public final class PeerSeedProtos {
               done = true;
               break;
             default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -1064,7 +1082,6 @@ public final class PeerSeedProtos {
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1098,7 +1115,7 @@ public final class PeerSeedProtos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (getSeedCount() > 0) {
         hash = (37 * hash) + SEED_FIELD_NUMBER;
         hash = (53 * hash) + getSeedList().hashCode();
@@ -1117,6 +1134,17 @@ public final class PeerSeedProtos {
       return hash;
     }
 
+    public static org.bitcoin.crawler.PeerSeedProtos.PeerSeeds parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoin.crawler.PeerSeedProtos.PeerSeeds parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoin.crawler.PeerSeedProtos.PeerSeeds parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1292,7 +1320,7 @@ public final class PeerSeedProtos {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1305,12 +1333,12 @@ public final class PeerSeedProtos {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1790,7 +1818,7 @@ public final class PeerSeedProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new PeerSeeds(input, extensionRegistry);
+        return new PeerSeeds(input, extensionRegistry);
       }
     };
 
@@ -1847,6 +1875,7 @@ public final class PeerSeedProtos {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:org.bitcoin.crawler.SignedPeerSeeds)
       SignedPeerSeedsOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use SignedPeerSeeds.newBuilder() to construct.
     private SignedPeerSeeds(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -1867,6 +1896,9 @@ public final class PeerSeedProtos {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1879,8 +1911,8 @@ public final class PeerSeedProtos {
               done = true;
               break;
             default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -2028,7 +2060,6 @@ public final class PeerSeedProtos {
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -2065,7 +2096,7 @@ public final class PeerSeedProtos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasPeerSeeds()) {
         hash = (37 * hash) + PEER_SEEDS_FIELD_NUMBER;
         hash = (53 * hash) + getPeerSeeds().hashCode();
@@ -2083,6 +2114,17 @@ public final class PeerSeedProtos {
       return hash;
     }
 
+    public static org.bitcoin.crawler.PeerSeedProtos.SignedPeerSeeds parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoin.crawler.PeerSeedProtos.SignedPeerSeeds parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoin.crawler.PeerSeedProtos.SignedPeerSeeds parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2248,7 +2290,7 @@ public final class PeerSeedProtos {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -2261,12 +2303,12 @@ public final class PeerSeedProtos {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2460,7 +2502,7 @@ public final class PeerSeedProtos {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new SignedPeerSeeds(input, extensionRegistry);
+        return new SignedPeerSeeds(input, extensionRegistry);
       }
     };
 

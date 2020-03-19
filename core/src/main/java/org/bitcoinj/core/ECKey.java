@@ -26,7 +26,7 @@ import com.google.common.base.Preconditions;
 import com.google.common.primitives.UnsignedBytes;
 import org.bitcoin.NativeSecp256k1;
 import org.bitcoin.NativeSecp256k1Util;
-import org.bitcoin.Secp256k1Context;
+import org.bitcoin.Secp256r1Context;
 import org.bitcoinj.wallet.Protos;
 import org.bitcoinj.wallet.Wallet;
 import org.slf4j.Logger;
@@ -118,7 +118,7 @@ public class ECKey implements EncryptableItem {
     };
 
     // The parameters of the secp256k1 curve that Bitcoin uses.
-    private static final X9ECParameters CURVE_PARAMS = CustomNamedCurves.getByName("secp256k1");
+    private static final X9ECParameters CURVE_PARAMS = CustomNamedCurves.getByName("secp256r1");
 
     /** The parameters of the secp256k1 curve that Bitcoin uses. */
     public static final ECDomainParameters CURVE;
@@ -666,7 +666,7 @@ public class ECKey implements EncryptableItem {
     }
 
     protected ECDSASignature doSign(Sha256Hash input, BigInteger privateKeyForSigning) {
-        if (Secp256k1Context.isEnabled()) {
+        if (Secp256r1Context.isEnabled()) {
             try {
                 byte[] signature = NativeSecp256k1.sign(
                         input.getBytes(),
@@ -702,7 +702,7 @@ public class ECKey implements EncryptableItem {
         if (FAKE_SIGNATURES)
             return true;
 
-        if (Secp256k1Context.isEnabled()) {
+        if (Secp256r1Context.isEnabled()) {
             try {
                 return NativeSecp256k1.verify(data, signature.encodeToDER(), pub);
             } catch (NativeSecp256k1Util.AssertFailException e) {
@@ -732,7 +732,7 @@ public class ECKey implements EncryptableItem {
      * @param pub       The public key bytes to use.
      */
     public static boolean verify(byte[] data, byte[] signature, byte[] pub) {
-        if (Secp256k1Context.isEnabled()) {
+        if (Secp256r1Context.isEnabled()) {
             try {
                 return NativeSecp256k1.verify(data, signature, pub);
             } catch (NativeSecp256k1Util.AssertFailException e) {

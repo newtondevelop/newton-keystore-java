@@ -53,6 +53,7 @@ public final class ClientState {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:paymentchannels.StoredClientPaymentChannels)
       StoredClientPaymentChannelsOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use StoredClientPaymentChannels.newBuilder() to construct.
     private StoredClientPaymentChannels(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -71,6 +72,9 @@ public final class ClientState {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -83,8 +87,8 @@ public final class ClientState {
               done = true;
               break;
             default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -198,7 +202,6 @@ public final class ClientState {
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -222,7 +225,7 @@ public final class ClientState {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (getChannelsCount() > 0) {
         hash = (37 * hash) + CHANNELS_FIELD_NUMBER;
         hash = (53 * hash) + getChannelsList().hashCode();
@@ -232,6 +235,17 @@ public final class ClientState {
       return hash;
     }
 
+    public static org.bitcoinj.protocols.channels.ClientState.StoredClientPaymentChannels parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoinj.protocols.channels.ClientState.StoredClientPaymentChannels parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoinj.protocols.channels.ClientState.StoredClientPaymentChannels parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -397,7 +411,7 @@ public final class ClientState {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -410,12 +424,12 @@ public final class ClientState {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -757,7 +771,7 @@ public final class ClientState {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new StoredClientPaymentChannels(input, extensionRegistry);
+        return new StoredClientPaymentChannels(input, extensionRegistry);
       }
     };
 
@@ -935,6 +949,7 @@ public final class ClientState {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:paymentchannels.StoredClientPaymentChannel)
       StoredClientPaymentChannelOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use StoredClientPaymentChannel.newBuilder() to construct.
     private StoredClientPaymentChannel(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -963,6 +978,9 @@ public final class ClientState {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -975,8 +993,8 @@ public final class ClientState {
               done = true;
               break;
             default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -1400,7 +1418,6 @@ public final class ClientState {
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1477,7 +1494,7 @@ public final class ClientState {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasId()) {
         hash = (37 * hash) + ID_FIELD_NUMBER;
         hash = (53 * hash) + getId().hashCode();
@@ -1530,6 +1547,17 @@ public final class ClientState {
       return hash;
     }
 
+    public static org.bitcoinj.protocols.channels.ClientState.StoredClientPaymentChannel parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoinj.protocols.channels.ClientState.StoredClientPaymentChannel parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoinj.protocols.channels.ClientState.StoredClientPaymentChannel parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1748,7 +1776,7 @@ public final class ClientState {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1761,12 +1789,12 @@ public final class ClientState {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2352,7 +2380,7 @@ public final class ClientState {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new StoredClientPaymentChannel(input, extensionRegistry);
+        return new StoredClientPaymentChannel(input, extensionRegistry);
       }
     };
 
@@ -2399,7 +2427,7 @@ public final class ClientState {
       " \002(\014\022\023\n\013myPublicKey\030\010 \002(\014\022\r\n\005myKey\030\004 \002(\014" +
       "\022\021\n\tvalueToMe\030\005 \002(\004\022\022\n\nrefundFees\030\006 \002(\004\022" +
       "\034\n\024closeTransactionHash\030\007 \001(\014\022\027\n\014majorVe" +
-      "rsion\030\t \001(\r:\0011\022\022\n\nexpiryTime\030\n \001(\004\022\021\n\tse",
+      "rsion\030\t \001(\r:\0011\022\022\n\nexpiryTime\030\n \001(\004\022\021\n\tse" +
       "rverKey\030\013 \001(\014B.\n\037org.bitcoinj.protocols." +
       "channelsB\013ClientState"
     };

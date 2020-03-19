@@ -104,4 +104,34 @@ public final class HDUtils {
 
         return nodes;
     }
+
+    /**
+     * The path is a human-friendly representation of the deterministic path. For example:
+     *
+     * "44H / 0H / 0H / 1 / 1"
+     * "44'/0'/0'/1/1"
+     * Where a letter "H" means hardened key. Spaces are ignored.
+     */
+    public static List<ChildNumber> parseSupportPath(@Nonnull String path) {
+        path = path.replace("x","0");
+        boolean isFriendly = isHumanFriendly(path);
+        String startPrefix = isFriendly ? "M" : "m";
+        String hardFlag = isFriendly ? "H" : "'";
+        String[] parsedNodes = path.replace(startPrefix, "").split("/");
+        List<ChildNumber> nodes = new ArrayList<>();
+        for (String n : parsedNodes) {
+            n = n.replaceAll(" ", "");
+            if (n.length() == 0) continue;
+            boolean isHard = n.endsWith(hardFlag);
+            if (isHard) n = n.substring(0, n.length() - 1);
+            int nodeNumber = Integer.parseInt(n);
+            System.out.println(nodeNumber);
+            nodes.add(new ChildNumber(nodeNumber, isHard));
+        }
+        return nodes;
+    }
+
+    private static boolean isHumanFriendly(@Nonnull String path) {
+        return path.contains("M");
+    }
 }

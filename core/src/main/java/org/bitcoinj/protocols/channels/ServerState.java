@@ -53,6 +53,7 @@ public final class ServerState {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:paymentchannels.StoredServerPaymentChannels)
       StoredServerPaymentChannelsOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use StoredServerPaymentChannels.newBuilder() to construct.
     private StoredServerPaymentChannels(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -71,6 +72,9 @@ public final class ServerState {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -83,8 +87,8 @@ public final class ServerState {
               done = true;
               break;
             default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -198,7 +202,6 @@ public final class ServerState {
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -222,7 +225,7 @@ public final class ServerState {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (getChannelsCount() > 0) {
         hash = (37 * hash) + CHANNELS_FIELD_NUMBER;
         hash = (53 * hash) + getChannelsList().hashCode();
@@ -232,6 +235,17 @@ public final class ServerState {
       return hash;
     }
 
+    public static org.bitcoinj.protocols.channels.ServerState.StoredServerPaymentChannels parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoinj.protocols.channels.ServerState.StoredServerPaymentChannels parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoinj.protocols.channels.ServerState.StoredServerPaymentChannels parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -397,7 +411,7 @@ public final class ServerState {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -410,12 +424,12 @@ public final class ServerState {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -757,7 +771,7 @@ public final class ServerState {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new StoredServerPaymentChannels(input, extensionRegistry);
+        return new StoredServerPaymentChannels(input, extensionRegistry);
       }
     };
 
@@ -871,6 +885,7 @@ public final class ServerState {
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:paymentchannels.StoredServerPaymentChannel)
       StoredServerPaymentChannelOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use StoredServerPaymentChannel.newBuilder() to construct.
     private StoredServerPaymentChannel(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -896,6 +911,9 @@ public final class ServerState {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -908,8 +926,8 @@ public final class ServerState {
               done = true;
               break;
             default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -1204,7 +1222,6 @@ public final class ServerState {
       return size;
     }
 
-    private static final long serialVersionUID = 0L;
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
@@ -1266,7 +1283,7 @@ public final class ServerState {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasBestValueToMe()) {
         hash = (37 * hash) + BESTVALUETOME_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -1306,6 +1323,17 @@ public final class ServerState {
       return hash;
     }
 
+    public static org.bitcoinj.protocols.channels.ServerState.StoredServerPaymentChannel parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoinj.protocols.channels.ServerState.StoredServerPaymentChannel parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoinj.protocols.channels.ServerState.StoredServerPaymentChannel parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1505,7 +1533,7 @@ public final class ServerState {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1518,12 +1546,12 @@ public final class ServerState {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1917,7 +1945,7 @@ public final class ServerState {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new StoredServerPaymentChannel(input, extensionRegistry);
+        return new StoredServerPaymentChannel(input, extensionRegistry);
       }
     };
 
@@ -1964,7 +1992,7 @@ public final class ServerState {
       "nsactionUnlockTimeSecs\030\003 \002(\004\022\033\n\023contract" +
       "Transaction\030\004 \002(\014\022\024\n\014clientOutput\030\005 \001(\014\022" +
       "\r\n\005myKey\030\006 \002(\014\022\027\n\014majorVersion\030\007 \001(\r:\0011\022" +
-      "\021\n\tclientKey\030\010 \001(\014B.\n\037org.bitcoinj.proto",
+      "\021\n\tclientKey\030\010 \001(\014B.\n\037org.bitcoinj.proto" +
       "cols.channelsB\013ServerState"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

@@ -5,6 +5,7 @@ buildscript {
 
     dependencies {
         classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.4'
+        classpath "com.novoda:bintray-release:0.8.1"
     }
 }
 
@@ -12,6 +13,9 @@ allprojects {
     repositories {
         jcenter()
     }
+    group = 'org.newtondeveloper'
+}
 
-    group = 'org.bitcoinj'
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }

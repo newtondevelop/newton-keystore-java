@@ -1,9 +1,18 @@
 apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
 apply plugin: 'maven'
+apply plugin: "com.novoda.bintray-release"
 
-version = '0.15-SNAPSHOT'
-archivesBaseName = 'bitcoinj-core'
+version = '0.0.1'
+archivesBaseName = 'newpay-keystore'
+publish {
+    userOrg = 'xiawu'
+    groupId = 'org.newtondeveloper.keystore'
+    artifactId = 'newtondeveloper'
+    publishVersion = '0.0.1'
+    desc = 'Newpay '
+    website = 'https://github.com/newtondevelop/newton-keystore-java'
+}
 
 dependencies {
     compile 'com.madgag.spongycastle:core:1.58.0.0'

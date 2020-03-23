@@ -6,22 +6,22 @@ apply plugin: "com.novoda.bintray-release"
 version = '0.0.1'
 archivesBaseName = 'newpay-keystore'
 publish {
-    userOrg = 'xiawu'
-    groupId = 'org.newtondeveloper.keystore'
-    artifactId = 'newtondeveloper'
-    publishVersion = '0.0.1'
+    userOrg = 'newton-developer'
+    groupId = 'org.newtondeveloper'
+    artifactId = 'keystore'
+    publishVersion = version
     desc = 'Newpay '
     website = 'https://github.com/newtondevelop/newton-keystore-java'
 }
 
 dependencies {
     compile 'com.madgag.spongycastle:core:1.58.0.0'
-    implementation 'com.lambdaworks:scrypt:1.4.0'
-    implementation 'com.google.guava:guava:24.0-android'
+    compile 'com.lambdaworks:scrypt:1.4.0'
+    compile 'com.google.guava:guava:24.0-android'
     compile 'com.google.protobuf:protobuf-java:3.5.1'
     compile 'com.google.protobuf:protoc:3.5.1'
-    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
-    implementation 'org.slf4j:slf4j-api:1.7.25'
+    compile 'com.squareup.okhttp3:okhttp:3.9.1'
+    compile 'org.slf4j:slf4j-api:1.7.25'
     implementation 'net.jcip:jcip-annotations:1.0'
     compileOnly 'org.fusesource.leveldbjni:leveldbjni-all:1.8'
     testImplementation 'junit:junit:4.12'

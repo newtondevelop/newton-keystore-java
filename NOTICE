@@ -1,2 +1,9 @@
-1. Change the secp256k1 to secp256r1
-2. Change the 'Bitcoin seed' to 'Nist256p1 seed'
+opyright 2020 The Newton Foundation.
+
+This software contains code derived from the team web3j,
+including various modifications by Newton Foundation.
+
+This software is licensed under the GNU General Public License v3.0(https://www.gnu.org/licenses/gpl-3.0.en.html)
+
+
+

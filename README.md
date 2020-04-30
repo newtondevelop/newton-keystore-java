@@ -1,36 +1,30 @@
 
-### Technologies
+# Newton keystore java 
 
-* Java 7 for the core modules, Java 8 for everything else
-* [Gradle 3.4+](https://gradle.org/) - for building the project
-* [Google Protocol Buffers](https://github.com/google/protobuf) - for use with serialization and hardware communications
+Newton keystore java is newton SDK for Java and Android which is forked from [bitcoinj](https://github.com/bitcoinj/bitcoinj).
 
-### Getting started
+## Getting started
 
-To get started, it is best to have the latest JDK and Gradle installed. The HEAD of the `master` branch contains the latest development code and various production releases are provided on feature branches.
+Add the relevant dependency to your project:
 
-#### Building from the command line
+### Maven
+Java 8:
 
-To perform a full build use
 ```
-gradle clean build
+<dependency>
+  <groupId>org.newtondeveloper</groupId>
+  <artifactId>newpay-keystore</artifactId>
+  <version>0.0.1</version>
+  <type>pom</type>
+</dependency>
 ```
-You can also run
+
+### Gradle
+Java 8:
 ```
-gradle javadoc
+implementation 'org.newtondeveloper:newpay-keystore:0.0.1'
 ```
-to generate the JavaDocs.
 
-The outputs are under the `build` directory.
+## Difference between bitcoinj
 
-#### Building from an IDE
-
-Alternatively, just import the project using your IDE. [IntelliJ](http://www.jetbrains.com/idea/download/) has Gradle integration built-in and has a free Community Edition. Simply use `File | New | Project from Existing Sources` and locate the `build.gradle` in the root of the cloned project source tree.
-
-### Example applications
-
-These are found in the `examples` module.
-
-### Where next?
-
-Now you are ready to [follow the tutorial](https://bitcoinj.github.io/getting-started).
+changed [Bitcoin seed](https://github.com/bitcoinj/bitcoinj/blob/master/core/src/main/java/org/bitcoinj/cryp    to/HDKeyDerivation.java#L65) to [Nist256p1 seed](https://github.com/newtondevelop/newton-keystore-java/blob/mas    ter/core/src/main/java/org/bitcoinj/crypto/HDKeyDerivation.java#L65).

@@ -27,4 +27,4 @@ implementation 'org.newtondeveloper:newpay-keystore:0.0.1'
 
 ## Difference between bitcoinj
 
-changed [Bitcoin seed](https://github.com/bitcoinj/bitcoinj/blob/master/core/src/main/java/org/bitcoinj/cryp    to/HDKeyDerivation.java#L65) to [Nist256p1 seed](https://github.com/newtondevelop/newton-keystore-java/blob/mas    ter/core/src/main/java/org/bitcoinj/crypto/HDKeyDerivation.java#L65).
+Changed [Bitcoin seed](https://github.com/bitcoinj/bitcoinj/blob/master/core/src/main/java/org/bitcoinj/crypto/HDKeyDerivation.java#L65) to [Nist256p1 seed](https://github.com/newtondevelop/newton-keystore-java/blob/master/core/src/main/java/org/bitcoinj/crypto/HDKeyDerivation.java#L65).

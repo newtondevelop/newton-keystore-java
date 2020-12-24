@@ -118,20 +118,24 @@ public class ECKey implements EncryptableItem {
     };
 
     // The parameters of the secp256k1 curve that Bitcoin uses.
-    private static final X9ECParameters CURVE_PARAMS = CustomNamedCurves.getByName("secp256k1");
+    private static X9ECParameters CURVE_PARAMS = CustomNamedCurves.getByName("secp256k1");
 
     /** The parameters of the secp256k1 curve that Bitcoin uses. */
-    public static final ECDomainParameters CURVE;
+    public static ECDomainParameters CURVE;
 
     /**
      * Equal to CURVE.getN().shiftRight(1), used for canonicalising the S value of a signature. If you aren't
      * sure what this is about, you can ignore it.
      */
-    public static final BigInteger HALF_CURVE_ORDER;
+    public static BigInteger HALF_CURVE_ORDER;
 
-    private static final SecureRandom secureRandom;
+    private static SecureRandom secureRandom;
 
-    static {
+    public static void reloadR1() {
+        CURVE_PARAMS = CustomNamedCurves.getByName("secp256r1");
+    }
+
+    static void init() {
         // Init proper random number generator, as some old Android installations have bugs that make it unsecure.
         if (Utils.isAndroidRuntime())
             new LinuxSecureRandom();
@@ -144,6 +148,10 @@ public class ECKey implements EncryptableItem {
                 CURVE_PARAMS.getH());
         HALF_CURVE_ORDER = CURVE_PARAMS.getN().shiftRight(1);
         secureRandom = new SecureRandom();
+    }
+
+    static {
+        init();
     }
 
     // The two parts of the key. If "priv" is set, "pub" can always be calculated. If "pub" is set but not "priv", we
@@ -690,7 +698,7 @@ public class ECKey implements EncryptableItem {
 
     /**
      * <p>Verifies the given ECDSA signature against the message bytes using the public key bytes.</p>
-     * 
+     *
      * <p>When using native ECDSA verification, data must be 32 bytes, and no element may be
      * larger than 520 bytes.</p>
      *

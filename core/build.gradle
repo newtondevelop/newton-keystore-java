@@ -3,10 +3,10 @@ apply plugin: 'com.google.protobuf'
 apply plugin: 'maven'
 apply plugin: "com.novoda.bintray-release"
 
-version = '0.0.1'
+version = '0.0.2'
 archivesBaseName = 'newpay-keystore'
 publish {
-    userOrg = 'newton-developer'
+    userOrg = 'weixuefeng'
     groupId = 'org.newtondeveloper'
     artifactId = 'keystore'
     publishVersion = version

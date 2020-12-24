@@ -61,9 +61,17 @@ public final class HDKeyDerivation {
      * @throws IllegalArgumentException if the seed is less than 8 bytes and could be brute forced
      */
     public static DeterministicKey createMasterPrivateKey(byte[] seed) throws HDDerivationException {
+        return createMasterPrivateKeyWithKeys(seed, "Bitcoin seed".getBytes());
+    }
+
+    public static DeterministicKey createMasterPrivateKeyNist(byte[] seed) throws HDDerivationException {
+        return createMasterPrivateKeyWithKeys(seed, "Nist256p1 seed".getBytes());
+    }
+
+    public static DeterministicKey createMasterPrivateKeyWithKeys(byte[] seed, byte[] keys) throws HDDerivationException {
         checkArgument(seed.length > 8, "Seed is too short and could be brute forced");
         // Calculate I = HMAC-SHA512(key="Bitcoin seed", msg=S)
-        byte[] i = HDUtils.hmacSha512(HDUtils.createHmacSha512Digest("Nist256p1 seed".getBytes()), seed);
+        byte[] i = HDUtils.hmacSha512(HDUtils.createHmacSha512Digest(keys), seed);
         // Split I into two 32-byte sequences, Il and Ir.
         // Use Il as master secret key, and Ir as master chain code.
         checkState(i.length == 64, i.length);
@@ -77,6 +85,8 @@ public final class HDKeyDerivation {
         masterPrivKey.setCreationTimeSeconds(Utils.currentTimeSeconds());
         return masterPrivKey;
     }
+
+
 
     /**
      * @throws HDDerivationException if privKeyBytes is invalid (not between 0 and n inclusive).
